@@ -1,189 +1,45 @@
 # AI Toolkit by Ostris
 
-AI Toolkit is an all in one training suite for diffusion models. I try to support all the latest models on consumer grade hardware. Image and video models. It can be run as a GUI or CLI. It is designed to be easy to use but still have every feature imaginable.
-
-## Support My Work
-
-If you enjoy my projects or use them commercially, please consider sponsoring me. Every bit helps! 💖
-
-[Sponsor on GitHub](https://github.com/orgs/ostris) | [Support on Patreon](https://www.patreon.com/ostris) | [Donate on PayPal](https://www.paypal.com/donate/?hosted_button_id=9GEFUKC8T9R9W)
-
-### Current Sponsors
-
-All of these people / organizations are the ones who selflessly make this project possible. Thank you!!
-
-_Last updated: 2025-10-20 15:52 UTC_
-
-<p align="center">
-<a href="https://x.com/NuxZoe" target="_blank" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/1919488160125616128/QAZXTMEj_400x400.png" alt="a16z" width="280" height="280" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="https://github.com/replicate" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/60410876?v=4" alt="Replicate" width="280" height="280" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="https://github.com/huggingface" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/25720743?v=4" alt="Hugging Face" width="280" height="280" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-</p>
-<hr style="width:100%;border:none;height:2px;background:#ddd;margin:30px 0;">
-<p align="center">
-<a href="https://www.pixelcut.ai/" target="_blank" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/1496882159658885133/11asz2Sc_400x400.jpg" alt="Pixelcut" width="200" height="200" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="https://github.com/josephrocca" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/1167575?u=92d92921b4cb5c8c7e225663fed53c4b41897736&v=4" alt="josephrocca" width="200" height="200" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="https://github.com/weights-ai" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/185568492?v=4" alt="Weights" width="200" height="200" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-</p>
-<hr style="width:100%;border:none;height:2px;background:#ddd;margin:30px 0;">
-<p align="center">
-<img src="https://c8.patreon.com/4/200/33158543/C" alt="clement Delangue" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/8654302/b0f5ebedc62a47c4b56222693e1254e9/eyJ3IjoyMDB9/2.jpeg?token-hash=suI7_QjKUgWpdPuJPaIkElkTrXfItHlL8ZHLPT-w_d4%3D" alt="Misch Strotz" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/93304/J" alt="Joseph Rocca" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/161471720/dd330b4036d44a5985ed5985c12a5def/eyJ3IjoyMDB9/1.jpeg?token-hash=k1f4Vv7TevzYa9tqlzAjsogYmkZs8nrXQohPCDGJGkc%3D" alt="Vladimir Sotnikov" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/120239481/49b1ce70d3d24704b8ec34de24ec8f55/eyJ3IjoyMDB9/1.jpeg?token-hash=o0y1JqSXqtGvVXnxb06HMXjQXs6OII9yMMx5WyyUqT4%3D" alt="nitish PNR" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/152118848/3b15a43d71714552b5ed1c9f84e66adf/eyJ3IjoyMDB9/1.png?token-hash=MKf3sWHz0MFPm_OAFjdsNvxoBfN5B5l54mn1ORdlRy8%3D" alt="Kristjan Retter" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/2298192/1228b69bd7d7481baf3103315183250d/eyJ3IjoyMDB9/1.jpg?token-hash=opN1e4r4Nnvqbtr8R9HI8eyf9m5F50CiHDOdHzb4UcA%3D" alt="Mohamed Oumoumad" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/548524/S" alt="Steve Hanff" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/181019370/2050c03b87a54276996539aaa52ccd3e/eyJ3IjoyMDB9/1.png?token-hash=I0Exm-MPbLOnuWcwtEvKm2v3NtbhqPyQJMSMEAvsbWI%3D" alt="Keith  Ruby" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/8449560/P" alt="Patron" width="150" height="150" style="border-radius:8px;margin:5px;display: inline-block;">
-</p>
-<hr style="width:100%;border:none;height:2px;background:#ddd;margin:30px 0;">
-<p align="center">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/169502989/220069e79ce745b29237e94c22a729df/eyJ3IjoyMDB9/1.png?token-hash=E8E2JOqx66k2zMtYUw8Gy57dw-gVqA6OPpdCmWFFSFw%3D" alt="Timothy Bielec" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://x.com/NuxZoe" target="_blank" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/1916482710069014528/RDLnPRSg_400x400.jpg" alt="tungsten" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="http://www.ir-ltd.net" target="_blank" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/1602579392198283264/6Tm2GYus_400x400.jpg" alt="IR-Entertainment Ltd" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/96410991/C" alt="cmh" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/9547341/bb35d9a222fd460e862e960ba3eacbaf/eyJ3IjoyMDB9/1.jpeg?token-hash=Q2XGDvkCbiONeWNxBCTeTMOcuwTjOaJ8Z-CAf5xq3Hs%3D" alt="Travis Harrington" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/27288932/6c35d2d961ee4e14a7a368c990791315/eyJ3IjoyMDB9/1.jpeg?token-hash=TGIto_PGEG2NEKNyqwzEnRStOkhrjb3QlMhHA3raKJY%3D" alt="David Garrido" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/5021048/c6beacab0fdb4568bf9f0d549aa4bc44/eyJ3IjoyMDB9/1.jpeg?token-hash=JTEtFVzUeU7pQw4R3eSn6rGgqgi44uc2rDBAv6F6A4o%3D" alt="Infinite " width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/98811435/3a3632d1795b4c2b9f8f0270f2f6a650/eyJ3IjoyMDB9/1.jpeg?token-hash=657rzuJ0bZavMRZW3XZ-xQGqm3Vk6FkMZgFJVMCOPdk%3D" alt="EmmanuelMr18" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://x.com/RalFingerLP" target="_blank" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/919595465041162241/ZU7X3T5k_400x400.jpg" alt="RalFinger" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/93348210/5c650f32a0bc481d80900d2674528777/eyJ3IjoyMDB9/1.jpeg?token-hash=0jiknRw3jXqYWW6En8bNfuHgVDj4LI_rL7lSS4-_xlo%3D" alt="Armin Behjati" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/155963250/6f8fd7075c3b4247bfeb054ba49172d6/eyJ3IjoyMDB9/1.png?token-hash=z81EHmdU2cqSrwa9vJmZTV3h0LG-z9Qakhxq34FrYT4%3D" alt="Un Defined" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/81275465/1e4148fe9c47452b838949d02dd9a70f/eyJ3IjoyMDB9/2.JPG?token-hash=zvDHRVNmXB0SgIU2ECcc0UWYjRa0q8Rjyd9T-SGOLhU%3D" alt="Aaron Amortegui" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/570742/4ceb33453a5a4745b430a216aba9280f/eyJ3IjoyMDB9/1.jpg?token-hash=nPcJ2zj3sloND9jvbnbYnob2vMXRnXdRuujthqDLWlU%3D" alt="Al H" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/jakeblakeley" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/2407659?u=be0bc786663527f2346b2e99ff608796bce19b26&v=4" alt="Jake Blakeley" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/33228112/J" alt="Jimmy Simmons" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/99036356/7ae9c4d80e604e739b68cca12ee2ed01/eyJ3IjoyMDB9/3.png?token-hash=ZhsBMoTOZjJ-Y6h5NOmU5MT-vDb2fjK46JDlpEehkVQ%3D" alt="Noctre" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/55206617/X" alt="xv" width="100" height="100" style="border-radius:8px;margin:5px;display: inline-block;">
-</p>
-<hr style="width:100%;border:none;height:2px;background:#ddd;margin:30px 0;">
-<p align="center">
-<img src="https://c8.patreon.com/4/200/27791680/J" alt="Jean-Tristan Marin" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/82763/f99cc484361d4b9d94fe4f0814ada303/eyJ3IjoyMDB9/1.jpeg?token-hash=A3JWlBNL0b24FFWb-FCRDAyhs-OAxg-zrhfBXP_axuU%3D" alt="Doron Adler" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/103077711/bb215761cc004e80bd9cec7d4bcd636d/eyJ3IjoyMDB9/2.jpeg?token-hash=3U8kdZSUpnmeYIDVK4zK9TTXFpnAud_zOwBRXx18018%3D" alt="John Dopamine" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/141098579/1a9f0a1249d447a7a0df718a57343912/eyJ3IjoyMDB9/2.png?token-hash=_n-AQmPgY0FP9zCGTIEsr5ka4Y7YuaMkt3qL26ZqGg8%3D" alt="The Local Lab" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/134129880/680c7e14cd1a4d1a9face921fb010f88/eyJ3IjoyMDB9/1.png?token-hash=5fqqHE6DCTbt7gDQL7VRcWkV71jF7FvWcLhpYl5aMXA%3D" alt="Bharat Prabhakar" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/70218846/C" alt="Cosmosis" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/30931983/54ab4e4ceab946e79a6418d205f9ed51/eyJ3IjoyMDB9/1.png?token-hash=j2phDrgd6IWuqKqNIDbq9fR2B3fMF-GUCQSdETS1w5Y%3D" alt="HestoySeghuro ." width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/Wallawalla47" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/46779408?v=4" alt="Ian R" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/4105384/J" alt="Jack Blakely" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/24653779/R" alt="RayHell" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/4541423/S" alt="Sören " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/97985240/3d1d0e6905d045aba713e8132cab4a30/eyJ3IjoyMDB9/1.png?token-hash=fRavvbO_yqWKA_OsJb5DzjfKZ1Yt-TG-ihMoeVBvlcM%3D" alt="עומר מכלוף" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/53077895/M" alt="Marc" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/157407541/bb9d80cffdab4334ad78366060561520/eyJ3IjoyMDB9/2.png?token-hash=WYz-U_9zabhHstOT5UIa5jBaoFwrwwqyWxWEzIR2m_c%3D" alt="Tokio Studio srl IT10640050968" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/44568304/a9d83a0e786b41b4bdada150f7c9271c/eyJ3IjoyMDB9/1.jpeg?token-hash=FtxnwrSrknQUQKvDRv2rqPceX2EF23eLq4pNQYM_fmw%3D" alt="Albert Bukoski" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/5048649/B" alt="Ben Ward" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/111904990/08b1cf65be6a4de091c9b73b693b3468/eyJ3IjoyMDB9/1.png?token-hash=_Odz6RD3CxtubEHbUxYujcjw6zAajbo3w8TRz249VBA%3D" alt="Brian Smith" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/494309/J" alt="Julian Tsependa" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/5602036/K" alt="Kelevra" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/159203973/36c817f941ac4fa18103a4b8c0cb9cae/eyJ3IjoyMDB9/1.png?token-hash=zkt72HW3EoiIEAn3LSk9gJPBsXfuTVcc4rRBS3CeR8w%3D" alt="Marko jak" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/11198131/e696d9647feb4318bcf16243c2425805/eyJ3IjoyMDB9/1.jpeg?token-hash=c2c2p1SaiX86iXAigvGRvzm4jDHvIFCg298A49nIfUM%3D" alt="Nicholas Agranoff" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/785333/bdb9ede5765d42e5a2021a86eebf0d8f/eyJ3IjoyMDB9/2.jpg?token-hash=l_rajMhxTm6wFFPn7YdoKBxeUqhdRXKdy6_8SGCuNsE%3D" alt="Sapjes " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/76566911/6485eaf5ec6249a7b524ee0b979372f0/eyJ3IjoyMDB9/1.jpeg?token-hash=mwCSkTelDBaengG32NkN0lVl5mRjB-cwo6-a47wnOsU%3D" alt="the biitz" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/83034/W" alt="william tatum" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/32633822/1ab5612efe80417cbebfe91e871fc052/eyJ3IjoyMDB9/1.png?token-hash=pOS_IU3b3RL5-iL96A3Xqoj2bQ-dDo4RUkBylcMED_s%3D" alt="Zack Abrams" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/25209707/36ae876d662d4d85aaf162b6d67d31e7/eyJ3IjoyMDB9/1.png?token-hash=Zows_A6uqlY5jClhfr4Y3QfMnDKVkS3mbxNHUDkVejo%3D" alt="fjioq8" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/46680573/ee3d99c04a674dd5a8e1ecfb926db6a2/eyJ3IjoyMDB9/1.jpeg?token-hash=cgD4EXyfZMPnXIrcqWQ5jGqzRUfqjPafb9yWfZUPB4Q%3D" alt="Neil Murray" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/julien-blanchon" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/11278197?v=4" alt="Blanchon" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/2446176/S" alt="Scott VanKirk" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/Slartibart23" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/133593860?u=31217adb2522fb295805824ffa7e14e8f0fca6fa&v=4" alt="Slarti" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<a href="https://github.com/squewel" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/97603184?v=4" alt="squewel" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/80767260/1fa7b3119f9f4f40a68452e57de59bfe/eyJ3IjoyMDB9/1.jpeg?token-hash=H34Vxnd58NtbuJU1XFYPkQnraVXSynZHSL3SMMcdKbI%3D" alt="nuliajuk" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://www.youtube.com/@happyme7055" target="_blank" rel="noopener noreferrer"><img src="https://yt3.googleusercontent.com/ytc/AIdro_mFqhIRk99SoEWY2gvSvVp6u1SkCGMkRqYQ1OlBBeoOVp8=s160-c-k-c0x00ffffff-no-rj" alt="Marcus Rass" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/63510241/A" alt="Andrew Park" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/Spikhalskiy" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/532108?u=2464983638afea8caf4cd9f0e4a7bc3e6a63bb0a&v=4" alt="Dmitry Spikhalsky" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c8.patreon.com/4/200/88567307/E" alt="el Chavo" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/117569999/55f75c57f95343e58402529cec852b26/eyJ3IjoyMDB9/1.jpeg?token-hash=squblHZH4-eMs3gI46Uqu1oTOK9sQ-0gcsFdZcB9xQg%3D" alt="James Thompson" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/99049612/J" alt="Jhonry Tuillier" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/40761075/R" alt="Randy McEntee" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/28533016/e8f6044ccfa7483f87eeaa01c894a773/eyJ3IjoyMDB9/2.png?token-hash=ak-h3JWB50hyenCavcs32AAPw6nNhmH2nBFKpdk5hvM%3D" alt="William Tatum" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="yvggeniy romanskiy" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/11180426/J" alt="jarrett towe" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/91298241/1b1e6d698cde4faaaae6fc4c2d95d257/eyJ3IjoyMDB9/1.jpeg?token-hash=GCo7gAF_UUdJqz3FsCq8p1pq3AEoRAoC6YIvy5xEeZk%3D" alt="Daniel Partzsch" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Joakim Sällström" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/156564939/17dbfd45c59d4cf29853d710cb0c5d6f/eyJ3IjoyMDB9/1.png?token-hash=e6wXA_S8cgJeEDI9eJK934eB0TiM8mxJm9zW_VH0gDU%3D" alt="Hans Untch" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/59408413/B" alt="ByteC" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/55160464/42d4719ba0834e5d83aa989c04e762da/eyJ3IjoyMDB9/1.jpeg?token-hash=_twZUkW3NREIxGUOWskUdvuZQGEcRv9XMfu5NrnCe5M%3D" alt="Chris Canterbury" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/3712451/432e22a355494ec0a1ea1927ff8d452e/eyJ3IjoyMDB9/7.jpeg?token-hash=OpQ9SAfVQ4Un9dSYlGTHuApZo5GlJ797Mo0DtVtMOSc%3D" alt="David Shorey" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/63920575/D" alt="Dutchman5oh" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/27580949/97c7dd2456a34c71b6429612a9e20462/eyJ3IjoyMDB9/1.jpeg?token-hash=cASxwWk8joAXx4tUAHch5CvTiYBR2UOHMeJK6se5fl0%3D" alt="Gergely Madácsi" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/33866796/7fd2a214fd5c4062b0dd63a29f8de5bd/eyJ3IjoyMDB9/1.png?token-hash=8s-7yi8GawIlqr0FCTk5JWKy26acMiYlOD8LAk2HqqU%3D" alt="James" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/84891403/83682a2a2d3b49ba9d28e7221edd5752/eyJ3IjoyMDB9/1.jpeg?token-hash=LVB6lta4BonhfPwSUnZIDmSW3IU-eEO4sXD7NSK367g%3D" alt="Koray Birand" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/358350/L" alt="L D" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/63232055/2300b4ab370341b5b476902c9b8218ee/eyJ3IjoyMDB9/1.png?token-hash=R9Nb4O0aLBRwxT1cGHUMThlvf6A2MD5SO88lpZBdH7M%3D" alt="Marek P" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/902918/5344727418634dc7b7fe7709d515a1d9/eyJ3IjoyMDB9/2.jpg?token-hash=myqV_oclkicVk9BDrvTO50jyjxJJGZ8i7oVJHwc05to%3D" alt="Michael Carychao" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/9944625/P" alt="Pomoe " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/31613309/434500d03f714dc18049306ed3f0165c/eyJ3IjoyMDB9/1.jpg?token-hash=acILbq09wxUfJe-G2nMYUYkvHJ88ZxkzU4JebRPw2P0%3D" alt="Theta Graphics" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/10876902/T" alt="Tyssel" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/137975346/b0ac50eb2432471897ce59ddf1cb6b3d/eyJ3IjoyMDB9/1.png?token-hash=6iqhqukfgHK2IjlwTMsmBj3vratcfJ9pmxCmRkBu22s%3D" alt="Göran Burlin" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Heikki Rinkinen" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="The Rope Dude" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Till Meyer" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Valarm, LLC" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/48109692/4237f732212343448ee87f5badc26e2c/eyJ3IjoyMDB9/1.jpeg?token-hash=gGqrOyctiITIyPZgjmF6YQKNf6cS9OeY4waIav3OAiU%3D" alt="Yves Poezevara" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/89623281/28d0cb75fc68439d9491f4343966f56e/eyJ3IjoyMDB9/1.jpeg?token-hash=Zt5UxtzvxDJGTPVh5Yr5rTY8JrcDsni0Mi89nZuYrp4%3D" alt="michele carlone" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/88656169/dd8943d7421d41bb9a8eb99f6d1279da/eyJ3IjoyMDB9/1.jpeg?token-hash=wT5j273p5pV10l81yR6kYdfYHR_yQ81xUzr3OfcSf7s%3D" alt="Ame Ame" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/5155933/C" alt="Chris Dermody" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="David Hooper" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/6225312/F" alt="Fredrik Normann Johansen" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/44200812/f84fd628abb243bbaded4203761aca29/eyJ3IjoyMDB9/1.png?token-hash=ArthznCCT4BqOSMj_9oP4ECWWHnrb8nYPUDZ6DqSvMU%3D" alt="kingroka" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/mertguvencli" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/29762151?u=16a906d90df96c8cff9ea131a575c4bc171b1523&v=4" alt="Mert Guvencli" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/174319926/f16dc35b5c4741bd9c79fac3a8c8044d/eyJ3IjoyMDB9/1.jpeg?token-hash=GvYgc-XaRGI8BPnoMOo_txDfW0BjVayFdcxkshPyrvg%3D" alt="Philip Ring" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Rudolf Goertz" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/27667925/6dac043a087e4c498e842dfad193baae/eyJ3IjoyMDB9/1.jpeg?token-hash=0bSVQo7QMMdGxFazeM099gsR0wtf28_ZTXeLIHEbIVk%3D" alt="S.Hasan Rizvi" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/2986571/S" alt="stev " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/2472633/fea4a2888ea74c029e282fcc7ba76dd0/eyJ3IjoyMDB9/1.jpeg?token-hash=9O0lv1GQqftKoo8my9NrWSrRzHu-3IT_6VpCjHYixL8%3D" alt="Teemu Berglund" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Tommy Falkowski" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Victor-Ray Valdez" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/84873332/H" alt="Htango2" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Florian Fiegl" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Karol Stępień" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/2888571/65c717bd8a564e469c25aa5858f9821b/eyJ3IjoyMDB9/1.png?token-hash=zwMOgNEoC9hlr2KamiB7TG004gCfJ2exSRDO4dhxo5Q%3D" alt="Derrick Schultz" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/88088407/86e5b1fd6fc2420aa23f02a61cd23567/eyJ3IjoyMDB9/1.jpeg?token-hash=_OgOjImAEXlTCuUkvRjq11gcBi8vlVCcnxrmrf2Uw7Q%3D" alt="Domagoj Visic" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/131139078/a353438167dc44818c48fc90f6076eb1/eyJ3IjoyMDB9/1.png?token-hash=W9l0spDiIY2ecb3gUY70lXOgKkO-jCE4v12_c0EZhlA%3D" alt="J D" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/138787313/c809120005024afa959231fe8b253fd9/eyJ3IjoyMDB9/1.png?token-hash=O6x0kkR4uKBsg_OODFHjZqwAupVztiZEOiXYF_7yKxM%3D" alt="Metryman55" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/5233761/N" alt="Newtown " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/31518789/91dbf631441b460594bec9e8145ade11/eyJ3IjoyMDB9/3.jpeg?token-hash=m7vvKg4yoMnsYj6io4FOCyYUv92WoNXqFXz4S7r_Sdk%3D" alt="Number 6" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c8.patreon.com/4/200/7979776/P" alt="PizzaOrNot " width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/82707622/3f0de2ffd6eb4074ba91e81381146e1c/eyJ3IjoyMDB9/1.jpeg?token-hash=wk6wjILO2dDHJla7gn3MH9mEKl08e7PuBDwZRUtEQAw%3D" alt="Russell Norris" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://c10.patreonusercontent.com/4/patreon-media/p/user/152671296/b99acfeef2c44ff4b5c9b09dbb4dcb93/eyJ3IjoyMDB9/1.png?token-hash=FQV1mNBKd3FRtF1HU_UJq4xRoG4MbvmLPZebLJTckt0%3D" alt="Vince Cirelli" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Boris HANSSEN" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Juan Franco" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-<a href="https://github.com/marksverdhei" target="_blank" rel="noopener noreferrer"><img src="https://avatars.githubusercontent.com/u/46672778?u=d1ba8b17516e6ecf1cd55ca4db2b770f82285aad&v=4" alt="Markus / Mark" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;"></a>
-<img src="https://ostris.com/wp-content/uploads/2025/08/supporter_default.jpg" alt="Fabrizio Pasqualicchio" width="60" height="60" style="border-radius:8px;margin:5px;display: inline-block;">
-</p>
+> **中文汉化版本 | 由漣灀汉化**
+> 
+> 本项目为 AI Toolkit 的中文汉化版本，由漣灀进行汉化和维护。
+> 
+> 原项目地址：[ostris/ai-toolkit](https://github.com/ostris/ai-toolkit)
 
 ---
 
+AI Toolkit 是一个用于扩散模型的一体化训练套件。我尽力在消费级硬件上支持所有最新的模型，包括图像和视频模型。它可以作为 GUI 或 CLI 运行。它的设计目标是易于使用，同时具备所有可想象的功能。
 
+## 支持我的工作
 
+如果您喜欢我的项目或将其用于商业用途，请考虑赞助我。每一点帮助都很重要！💖
 
-## Installation
+[在 GitHub 上赞助](https://github.com/orgs/ostris) | [在 Patreon 上支持](https://www.patreon.com/ostris) | [在 PayPal 上捐赠](https://www.paypal.com/donate/?hosted_button_id=9GEFUKC8T9R9W)
 
-Requirements:
+---
+
+## 安装
+
+要求：
 - python >3.10
-- Nvidia GPU with enough ram to do what you need
+- 具有足够显存的 Nvidia GPU
 - python venv
 - git
 
-
-Linux:
+### Linux:
 ```bash
 git clone https://github.com/ostris/ai-toolkit.git
 cd ai-toolkit
 python3 -m venv venv
 source venv/bin/activate
-# install torch first
+# 先安装 torch
 pip3 install --no-cache-dir torch==2.7.0 torchvision==0.22.0 torchaudio==2.7.0 --index-url https://download.pytorch.org/whl/cu126
 pip3 install -r requirements.txt
 ```
 
-Windows:
+### Windows:
 
-If you are having issues with Windows. I recommend using the easy install script at [https://github.com/Tavris1/AI-Toolkit-Easy-Install](https://github.com/Tavris1/AI-Toolkit-Easy-Install)
+如果您在 Windows 上遇到问题，我建议使用 [https://github.com/Tavris1/AI-Toolkit-Easy-Install](https://github.com/Tavris1/AI-Toolkit-Easy-Install) 的简易安装脚本
 
 ```bash
 git clone https://github.com/ostris/ai-toolkit.git
@@ -199,28 +55,26 @@ pip install -r requirements.txt
 
 <img src="https://ostris.com/wp-content/uploads/2025/02/toolkit-ui.jpg" alt="AI Toolkit UI" width="100%">
 
-The AI Toolkit UI is a web interface for the AI Toolkit. It allows you to easily start, stop, and monitor jobs. It also allows you to easily train models with a few clicks. It also allows you to set a token for the UI to prevent unauthorized access so it is mostly safe to run on an exposed server.
+AI Toolkit UI 是 AI Toolkit 的 Web 界面。它允许您轻松启动、停止和监控任务。它还允许您通过几次点击轻松训练模型。它还允许您为 UI 设置令牌以防止未经授权的访问，因此在暴露的服务器上运行是相对安全的。
 
-## Running the UI
+## 运行 UI
 
-Requirements:
+要求：
 - Node.js > 18
 
-The UI does not need to be kept running for the jobs to run. It is only needed to start/stop/monitor jobs. The commands below
-will install / update the UI and it's dependencies and start the UI. 
+UI 不需要持续运行即可运行任务。它仅用于启动/停止/监控任务。以下命令将安装/更新 UI 及其依赖项并启动 UI。
 
 ```bash
 cd ui
 npm run build_and_start
 ```
 
-You can now access the UI at `http://localhost:8675` or `http://<your-ip>:8675` if you are running it on a server.
+您现在可以在 `http://localhost:8675` 或 `http://<your-ip>:8675`（如果在服务器上运行）访问 UI。
 
-## Securing the UI
+## 保护 UI
 
-If you are hosting the UI on a cloud provider or any network that is not secure, I highly recommend securing it with an auth token. 
-You can do this by setting the environment variable `AI_TOOLKIT_AUTH` to super secure password. This token will be required to access
-the UI. You can set this when starting the UI like so:
+如果您在云提供商或任何不安全的网络上托管 UI，我强烈建议使用身份验证令牌保护它。
+您可以通过将环境变量 `AI_TOOLKIT_AUTH` 设置为超级安全的密码来实现。访问 UI 将需要此令牌。您可以在启动 UI 时这样设置：
 
 ```bash
 # Linux
@@ -234,38 +88,31 @@ $env:AI_TOOLKIT_AUTH="super_secure_password"; npm run build_and_start
 ```
 
 
-## FLUX.1 Training
+## FLUX.1 训练
 
-### Tutorial
+### 教程
 
-To get started quickly, check out [@araminta_k](https://x.com/araminta_k) tutorial on [Finetuning Flux Dev on a 3090](https://www.youtube.com/watch?v=HzGW_Kyermg) with 24GB VRAM.
+要快速入门，请查看 [@araminta_k](https://x.com/araminta_k) 的教程：[在 3090 上微调 Flux Dev](https://www.youtube.com/watch?v=HzGW_Kyermg)，使用 24GB 显存。
 
-
-### Requirements
-You currently need a GPU with **at least 24GB of VRAM** to train FLUX.1. If you are using it as your GPU to control 
-your monitors, you probably need to set the flag `low_vram: true` in the config file under `model:`. This will quantize
-the model on CPU and should allow it to train with monitors attached. Users have gotten it to work on Windows with WSL,
-but there are some reports of a bug when running on windows natively. 
-I have only tested on linux for now. This is still extremely experimental
-and a lot of quantizing and tricks had to happen to get it to fit on 24GB at all. 
+### 要求
+您目前需要**至少 24GB 显存**的 GPU 来训练 FLUX.1。如果您将其用作控制显示器的 GPU，您可能需要在配置文件的 `model:` 下设置标志 `low_vram: true`。这将在 CPU 上量化模型，应该允许在连接显示器的情况下进行训练。用户已经在 Windows 上使用 WSL 成功运行，但有一些关于在 Windows 原生运行时出现错误的报告。
+我目前只在 Linux 上测试过。这仍然是极其实验性的，需要进行大量的量化和技巧才能使其适合 24GB。
 
 ### FLUX.1-dev
 
-FLUX.1-dev has a non-commercial license. Which means anything you train will inherit the
-non-commercial license. It is also a gated model, so you need to accept the license on HF before using it.
-Otherwise, this will fail. Here are the required steps to setup a license.
+FLUX.1-dev 具有非商业许可证。这意味着您训练的任何内容都将继承非商业许可证。它也是一个受限模型，因此您需要在使用前在 HF 上接受许可证。否则，这将失败。以下是设置许可证所需的步骤。
 
-1. Sign into HF and accept the model access here [black-forest-labs/FLUX.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev)
-2. Make a file named `.env` in the root on this folder
-3. [Get a READ key from huggingface](https://huggingface.co/settings/tokens/new?) and add it to the `.env` file like so `HF_TOKEN=your_key_here`
+1. 登录 HF 并在此处接受模型访问 [black-forest-labs/FLUX.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev)
+2. 在此文件夹的根目录创建一个名为 `.env` 的文件
+3. [从 huggingface 获取 READ 密钥](https://huggingface.co/settings/tokens/new?)并将其添加到 `.env` 文件中，如下所示 `HF_TOKEN=your_key_here`
 
 ### FLUX.1-schnell
 
-FLUX.1-schnell is Apache 2.0. Anything trained on it can be licensed however you want and it does not require a HF_TOKEN to train.
-However, it does require a special adapter to train with it, [ostris/FLUX.1-schnell-training-adapter](https://huggingface.co/ostris/FLUX.1-schnell-training-adapter).
-It is also highly experimental. For best overall quality, training on FLUX.1-dev is recommended.
+FLUX.1-schnell 是 Apache 2.0。在其上训练的任何内容都可以按您想要的方式许可，并且不需要 HF_TOKEN 来训练。
+但是，它确实需要一个特殊的适配器来训练，[ostris/FLUX.1-schnell-training-adapter](https://huggingface.co/ostris/FLUX.1-schnell-training-adapter)。
+它也是高度实验性的。为了获得最佳的整体质量，建议在 FLUX.1-dev 上进行训练。
 
-To use it, You just need to add the assistant to the `model` section of your config file like so:
+要使用它，您只需要将助手添加到配置文件的 `model` 部分，如下所示：
 
 ```yaml
       model:
@@ -275,58 +122,54 @@ To use it, You just need to add the assistant to the `model` section of your con
         quantize: true
 ```
 
-You also need to adjust your sample steps since schnell does not require as many
+您还需要调整采样步骤，因为 schnell 不需要那么多
 
 ```yaml
       sample:
-        guidance_scale: 1  # schnell does not do guidance
-        sample_steps: 4  # 1 - 4 works well
+        guidance_scale: 1  # schnell 不做引导
+        sample_steps: 4  # 1 - 4 效果很好
 ```
 
-### Training
-1. Copy the example config file located at `config/examples/train_lora_flux_24gb.yaml` (`config/examples/train_lora_flux_schnell_24gb.yaml` for schnell) to the `config` folder and rename it to `whatever_you_want.yml`
-2. Edit the file following the comments in the file
-3. Run the file like so `python run.py config/whatever_you_want.yml`
 
-A folder with the name and the training folder from the config file will be created when you start. It will have all 
-checkpoints and images in it. You can stop the training at any time using ctrl+c and when you resume, it will pick back up
-from the last checkpoint.
+### 训练
+1. 将位于 `config/examples/train_lora_flux_24gb.yaml`（对于 schnell 使用 `config/examples/train_lora_flux_schnell_24gb.yaml`）的示例配置文件复制到 `config` 文件夹并将其重命名为 `whatever_you_want.yml`
+2. 按照文件中的注释编辑文件
+3. 像这样运行文件 `python run.py config/whatever_you_want.yml`
 
-IMPORTANT. If you press crtl+c while it is saving, it will likely corrupt that checkpoint. So wait until it is done saving
+当您启动时，将创建一个具有配置文件中的名称和训练文件夹的文件夹。它将包含所有检查点和图像。您可以随时使用 ctrl+c 停止训练，当您恢复时，它将从最后一个检查点继续。
 
-### Need help?
+重要提示：如果您在保存时按 ctrl+c，它可能会损坏该检查点。所以请等到保存完成
 
-Please do not open a bug report unless it is a bug in the code. You are welcome to [Join my Discord](https://discord.gg/VXmU2f5WEU)
-and ask for help there. However, please refrain from PMing me directly with general question or support. Ask in the discord
-and I will answer when I can.
+### 需要帮助？
+
+除非是代码中的错误，否则请不要打开错误报告。欢迎您[加入我的 Discord](https://discord.gg/VXmU2f5WEU)并在那里寻求帮助。但是，请不要直接向我发送私信询问一般问题或支持。在 Discord 中提问，我会在有空时回答。
 
 ## Gradio UI
 
-To get started training locally with a with a custom UI, once you followed the steps above and `ai-toolkit` is installed:
+要使用自定义 UI 在本地开始训练，一旦您按照上述步骤操作并安装了 `ai-toolkit`：
 
 ```bash
-cd ai-toolkit #in case you are not yet in the ai-toolkit folder
-huggingface-cli login #provide a `write` token to publish your LoRA at the end
+cd ai-toolkit # 如果您还没有在 ai-toolkit 文件夹中
+huggingface-cli login # 提供一个 `write` 令牌以在最后发布您的 LoRA
 python flux_train_ui.py
 ```
 
-You will instantiate a UI that will let you upload your images, caption them, train and publish your LoRA
+您将实例化一个 UI，让您上传图像、为其添加标题、训练和发布您的 LoRA
 ![image](assets/lora_ease_ui.png)
 
 
-## Training in RunPod
-If you would like to use Runpod, but have not signed up yet, please consider using [my Runpod affiliate link](https://runpod.io?ref=h0y9jyr2) to help support this project.
+## 在 RunPod 中训练
+如果您想使用 Runpod，但尚未注册，请考虑使用[我的 Runpod 推荐链接](https://runpod.io?ref=h0y9jyr2)来帮助支持这个项目。
 
+我在这里维护一个官方的 Runpod Pod 模板，可以在[这里](https://console.runpod.io/deploy?template=0fqzfjy6f3&ref=h0y9jyr2)访问。
 
-I maintain an official Runpod Pod template here which can be accessed [here](https://console.runpod.io/deploy?template=0fqzfjy6f3&ref=h0y9jyr2).
+我还创建了一个简短的视频，展示如何使用 Runpod 开始使用 AI Toolkit，[在这里](https://youtu.be/HBNeS-F6Zz8)。
 
-I have also created a short video showing how to get started using AI Toolkit with Runpod [here](https://youtu.be/HBNeS-F6Zz8).
+## 在 Modal 中训练
 
-## Training in Modal
-
-### 1. Setup
+### 1. 设置
 #### ai-toolkit:
-```
+```bash
 git clone https://github.com/ostris/ai-toolkit.git
 cd ai-toolkit
 git submodule update --init --recursive
@@ -334,64 +177,61 @@ python -m venv venv
 source venv/bin/activate
 pip install torch
 pip install -r requirements.txt
-pip install --upgrade accelerate transformers diffusers huggingface_hub #Optional, run it if you run into issues
+pip install --upgrade accelerate transformers diffusers huggingface_hub # 可选，如果遇到问题请运行
 ```
+
 #### Modal:
-- Run `pip install modal` to install the modal Python package.
-- Run `modal setup` to authenticate (if this doesn’t work, try `python -m modal setup`).
+- 运行 `pip install modal` 安装 modal Python 包。
+- 运行 `modal setup` 进行身份验证（如果不起作用，请尝试 `python -m modal setup`）。
 
 #### Hugging Face:
-- Get a READ token from [here](https://huggingface.co/settings/tokens) and request access to Flux.1-dev model from [here](https://huggingface.co/black-forest-labs/FLUX.1-dev).
-- Run `huggingface-cli login` and paste your token.
+- 从[这里](https://huggingface.co/settings/tokens)获取 READ 令牌，并从[这里](https://huggingface.co/black-forest-labs/FLUX.1-dev)请求访问 Flux.1-dev 模型。
+- 运行 `huggingface-cli login` 并粘贴您的令牌。
 
-### 2. Upload your dataset
-- Drag and drop your dataset folder containing the .jpg, .jpeg, or .png images and .txt files in `ai-toolkit`.
+### 2. 上传您的数据集
+- 将包含 .jpg、.jpeg 或 .png 图像和 .txt 文件的数据集文件夹拖放到 `ai-toolkit` 中。
 
-### 3. Configs
-- Copy an example config file located at ```config/examples/modal``` to the `config` folder and rename it to ```whatever_you_want.yml```.
-- Edit the config following the comments in the file, **<ins>be careful and follow the example `/root/ai-toolkit` paths</ins>**.
+### 3. 配置
+- 将位于 `config/examples/modal` 的示例配置文件复制到 `config` 文件夹并将其重命名为 `whatever_you_want.yml`。
+- 编辑配置，遵循文件中的注释，**<ins>注意并遵循示例 `/root/ai-toolkit` 路径</ins>**。
 
-### 4. Edit run_modal.py
-- Set your entire local `ai-toolkit` path at `code_mount = modal.Mount.from_local_dir` like:
+
+### 4. 编辑 run_modal.py
+- 在 `code_mount = modal.Mount.from_local_dir` 设置您的整个本地 `ai-toolkit` 路径，如：
   
-   ```
+   ```python
    code_mount = modal.Mount.from_local_dir("/Users/username/ai-toolkit", remote_path="/root/ai-toolkit")
    ```
-- Choose a `GPU` and `Timeout` in `@app.function` _(default is A100 40GB and 2 hour timeout)_.
+- 在 `@app.function` 中选择 `GPU` 和 `Timeout` _（默认为 A100 40GB 和 2 小时超时）_。
 
-### 5. Training
-- Run the config file in your terminal: `modal run run_modal.py --config-file-list-str=/root/ai-toolkit/config/whatever_you_want.yml`.
-- You can monitor your training in your local terminal, or on [modal.com](https://modal.com/).
-- Models, samples and optimizer will be stored in `Storage > flux-lora-models`.
+### 5. 训练
+- 在终端中运行配置文件：`modal run run_modal.py --config-file-list-str=/root/ai-toolkit/config/whatever_you_want.yml`。
+- 您可以在本地终端或 [modal.com](https://modal.com/) 上监控您的训练。
+- 模型、样本和优化器将存储在 `Storage > flux-lora-models` 中。
 
-### 6. Saving the model
-- Check contents of the volume by running `modal volume ls flux-lora-models`. 
-- Download the content by running `modal volume get flux-lora-models your-model-name`.
-- Example: `modal volume get flux-lora-models my_first_flux_lora_v1`.
+### 6. 保存模型
+- 通过运行 `modal volume ls flux-lora-models` 检查卷的内容。
+- 通过运行 `modal volume get flux-lora-models your-model-name` 下载内容。
+- 示例：`modal volume get flux-lora-models my_first_flux_lora_v1`。
 
-### Screenshot from Modal
+### Modal 截图
 
-<img width="1728" alt="Modal Traning Screenshot" src="https://github.com/user-attachments/assets/7497eb38-0090-49d6-8ad9-9c8ea7b5388b">
+<img width="1728" alt="Modal Training Screenshot" src="https://github.com/user-attachments/assets/7497eb38-0090-49d6-8ad9-9c8ea7b5388b">
 
 ---
 
-## Dataset Preparation
+## 数据集准备
 
-Datasets generally need to be a folder containing images and associated text files. Currently, the only supported
-formats are jpg, jpeg, and png. Webp currently has issues. The text files should be named the same as the images
-but with a `.txt` extension. For example `image2.jpg` and `image2.txt`. The text file should contain only the caption.
-You can add the word `[trigger]` in the caption file and if you have `trigger_word` in your config, it will be automatically
-replaced. 
+数据集通常需要是包含图像和相关文本文件的文件夹。目前，唯一支持的格式是 jpg、jpeg 和 png。Webp 目前存在问题。文本文件应与图像同名，但扩展名为 `.txt`。例如 `image2.jpg` 和 `image2.txt`。文本文件应仅包含标题。
+您可以在标题文件中添加单词 `[trigger]`，如果您在配置中有 `trigger_word`，它将自动替换。
 
-Images are never upscaled but they are downscaled and placed in buckets for batching. **You do not need to crop/resize your images**.
-The loader will automatically resize them and can handle varying aspect ratios. 
+图像永远不会被放大，但会被缩小并放入桶中进行批处理。**您不需要裁剪/调整图像大小**。
+加载器将自动调整它们的大小，并可以处理不同的纵横比。
 
 
-## Training Specific Layers
+## 训练特定层
 
-To train specific layers with LoRA, you can use the `only_if_contains` network kwargs. For instance, if you want to train only the 2 layers
-used by The Last Ben, [mentioned in this post](https://x.com/__TheBen/status/1829554120270987740), you can adjust your
-network kwargs like so:
+要使用 LoRA 训练特定层，您可以使用 `only_if_contains` 网络参数。例如，如果您只想训练 The Last Ben 使用的 2 层，[在此帖子中提到](https://x.com/__TheBen/status/1829554120270987740)，您可以像这样调整您的网络参数：
 
 ```yaml
       network:
@@ -404,9 +244,8 @@ network kwargs like so:
             - "transformer.single_transformer_blocks.20.proj_out"
 ```
 
-The naming conventions of the layers are in diffusers format, so checking the state dict of a model will reveal 
-the suffix of the name of the layers you want to train. You can also use this method to only train specific groups of weights.
-For instance to only train the `single_transformer` for FLUX.1, you can use the following:
+层的命名约定采用 diffusers 格式，因此检查模型的状态字典将显示您想要训练的层名称的后缀。您还可以使用此方法仅训练特定的权重组。
+例如，要仅训练 FLUX.1 的 `single_transformer`，您可以使用以下内容：
 
 ```yaml
       network:
@@ -418,8 +257,7 @@ For instance to only train the `single_transformer` for FLUX.1, you can use the 
             - "transformer.single_transformer_blocks."
 ```
 
-You can also exclude layers by their names by using `ignore_if_contains` network kwarg. So to exclude all the single transformer blocks,
-
+您还可以使用 `ignore_if_contains` 网络参数按名称排除层。因此，要排除所有单个 transformer 块，
 
 ```yaml
       network:
@@ -431,12 +269,11 @@ You can also exclude layers by their names by using `ignore_if_contains` network
             - "transformer.single_transformer_blocks."
 ```
 
-`ignore_if_contains` takes priority over `only_if_contains`. So if a weight is covered by both,
-if will be ignored.
+`ignore_if_contains` 优先于 `only_if_contains`。因此，如果一个权重被两者覆盖，它将被忽略。
 
-## LoKr Training
+## LoKr 训练
 
-To learn more about LoKr, read more about it at [KohakuBlueleaf/LyCORIS](https://github.com/KohakuBlueleaf/LyCORIS/blob/main/docs/Guidelines.md). To train a LoKr model, you can adjust the network type in the config file like so:
+要了解有关 LoKr 的更多信息，请阅读 [KohakuBlueleaf/LyCORIS](https://github.com/KohakuBlueleaf/LyCORIS/blob/main/docs/Guidelines.md)。要训练 LoKr 模型，您可以像这样调整配置文件中的网络类型：
 
 ```yaml
       network:
@@ -445,44 +282,130 @@ To learn more about LoKr, read more about it at [KohakuBlueleaf/LyCORIS](https:/
         lokr_factor: 8
 ```
 
-Everything else should work the same including layer targeting.
+其他一切都应该以相同的方式工作，包括层定位。
 
 
-## Updates
+## Docker 使用
 
-Only larger updates are listed here. There are usually smaller daily updated that are omitted.
+### 使用 docker-compose（推荐）
 
-### Jul 17, 2025
-- Make it easy to add control images to the samples in the ui
+项目提供了完整的 Docker 支持。最简单的方式是使用 docker-compose：
 
-### Jul 11, 2025
-- Added better video config settings to the UI for video models.
-- Added Wan I2V training to the UI
+```bash
+# 1. 克隆项目
+git clone https://github.com/ostris/ai-toolkit.git
+cd ai-toolkit
 
-### June 29, 2025
-- Fixed issue where Kontext forced sizes on sampling
+# 2. 设置认证密码（可选但推荐）
+export AI_TOOLKIT_AUTH=your_password
 
-### June 26, 2025
-- Added support for FLUX.1 Kontext training
-- added support for instruction dataset training
+# 3. 启动容器
+docker-compose up -d
 
-### June 25, 2025
-- Added support for OmniGen2 training
-- 
-### June 17, 2025
-- Performance optimizations for batch preparation
-- Added some docs via a popup for items in the simple ui explaining what settings do. Still a WIP
+# 4. 访问 UI
+# 浏览器打开 http://localhost:8675
+```
 
-### June 16, 2025
-- Hide control images in the UI when viewing datasets
-- WIP on mean flow loss
+**docker-compose.yml 配置说明：**
+- **端口映射**：`8675:8675` - UI 访问端口
+- **卷挂载**：
+  - `~/.cache/huggingface/hub` - HuggingFace 模型缓存
+  - `./aitk_db.db` - 数据库文件
+  - `./datasets` - 训练数据集
+  - `./output` - 输出结果
+  - `./config` - 配置文件
+- **GPU 支持**：自动使用所有 NVIDIA GPU
+- **环境变量**：
+  - `AI_TOOLKIT_AUTH` - UI 访问密码（默认：password）
 
-### June 12, 2025
-- Fixed issue that resulted in blank captions in the dataloader
+### 手动构建和运行
 
-### June 10, 2025
-- Decided to keep track up updates in the readme
-- Added support for SDXL in the UI
-- Added support for SD 1.5 in the UI
-- Fixed UI Wan 2.1 14b name bug
-- Added support for for conv training in the UI for models that support it
+```bash
+# 1. 构建镜像
+docker build -f docker/Dockerfile -t ai-toolkit:latest .
+
+# 2. 运行容器
+docker run -d \
+  --gpus all \
+  -p 8675:8675 \
+  -v ~/.cache/huggingface/hub:/root/.cache/huggingface/hub \
+  -v $(pwd)/output:/app/ai-toolkit/output \
+  -v $(pwd)/config:/app/ai-toolkit/config \
+  -v $(pwd)/datasets:/app/ai-toolkit/datasets \
+  -e AI_TOOLKIT_AUTH=your_password \
+  ai-toolkit:latest
+```
+
+### 重要说明
+
+1. **GPU 要求**：需要 NVIDIA GPU（至少 24GB 显存用于 FLUX.1 训练）
+2. **HuggingFace Token**：如果训练 FLUX.1-dev，需要：
+   - 在 HF 上接受模型许可：https://huggingface.co/black-forest-labs/FLUX.1-dev
+   - 创建 `.env` 文件并添加：`HF_TOKEN=your_token_here`
+3. **访问 UI**：启动后访问 `http://localhost:8675`
+4. **安全性**：如果在公网运行，务必设置 `AI_TOOLKIT_AUTH` 密码
+
+### 查看日志
+
+```bash
+# docker-compose 方式
+docker-compose logs -f
+
+# 手动运行方式
+docker logs -f <container_id>
+```
+
+
+## 更新
+
+这里只列出较大的更新。通常会有较小的每日更新被省略。
+
+### 2025年7月17日
+- 使在 UI 中轻松添加控制图像到样本
+
+### 2025年7月11日
+- 为视频模型在 UI 中添加了更好的视频配置设置
+- 在 UI 中添加了 Wan I2V 训练
+
+### 2025年6月29日
+- 修复了 Kontext 强制大小的问题
+
+### 2025年6月26日
+- 添加了对 FLUX.1 Kontext 训练的支持
+- 添加了对指令数据集训练的支持
+
+### 2025年6月25日
+- 添加了对 OmniGen2 训练的支持
+
+### 2025年6月17日
+- 批处理准备的性能优化
+- 通过弹出窗口为简单 UI 中的项目添加了一些文档，解释设置的作用。仍在进行中
+
+### 2025年6月16日
+- 在 UI 中查看数据集时隐藏控制图像
+- 平均流损失的 WIP
+
+### 2025年6月12日
+- 修复了导致数据加载器中标题为空的问题
+
+### 2025年6月10日
+- 决定在 readme 中跟踪更新
+- 在 UI 中添加了对 SDXL 的支持
+- 在 UI 中添加了对 SD 1.5 的支持
+- 修复了 UI Wan 2.1 14b 名称错误
+- 在 UI 中为支持它的模型添加了对卷积训练的支持
+
+---
+
+## 许可证
+
+本项目采用 Apache 2.0 许可证。详情请参阅 [LICENSE](LICENSE) 文件。
+
+## 贡献
+
+欢迎贡献！请随时提交 Pull Request。
+
+## 致谢
+
+感谢所有赞助商和贡献者使这个项目成为可能！
+

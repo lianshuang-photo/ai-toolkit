@@ -1,5 +1,13 @@
 # AI Toolkit by Ostris
 
+> **中文汉化版本 | 由漣灀汉化**
+> 
+> 本项目为 AI Toolkit 的中文汉化版本，由漣灀进行汉化和维护。
+> 
+> 原项目地址：[ostris/ai-toolkit](https://github.com/ostris/ai-toolkit)
+
+---
+
 AI Toolkit 是一个用于扩散模型的一体化训练套件。我尽力在消费级硬件上支持所有最新的模型，包括图像和视频模型。它可以作为 GUI 或 CLI 运行。它的设计目标是易于使用，同时具备所有可想象的功能。
 
 ## 支持我的工作
